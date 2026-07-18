@@ -91,12 +91,35 @@
 // let newSalaryArray=employSalary.map(salary=>salary*2);
 // console.log(newSalaryArray);
 
-const studentList=[
-    {id:"001",name:"samn"},
-    {id:"002",name:"lavam"},
-    {id:"003",name:"savin"},
-    {id:"004",name:"kevin"},
-];
+// const studentList=[
+//     {id:"001",name:"samn"},
+//     {id:"002",name:"lavam"},
+//     {id:"003",name:"savin"},
+//     {id:"004",name:"kevin"},
+// ];
 
-let student =studentList.find(student=>student.id==="003");
-console.log(student);
+// let student =studentList.find(student=>student.id==="003");
+// console.log(student);
+
+//json java script object  motation
+fetch("https://jsonplaceholder.typicode.com/todos").then(res => res.json()).then(data => {
+    console.log(data);
+
+    let tblTodoList = document.getElementById("tblTodoList");
+
+    let body = ""
+
+    data.forEach(element => {
+        body += `
+                <tr>
+            <td>${element.id}</td>
+            <td>${element.title}</td>
+            <td>${element.userId}</td>
+            <td>${element.completed}</td>
+        </tr>
+        `
+    });
+
+    tblTodoList.innerHTML = body;
+
+})
