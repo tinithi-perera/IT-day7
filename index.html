@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            background-color: antiquewhite;
+            padding: 10px;
+            border-radius: 10pxS;
+        }
+
+        body {
+
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("images/number-guessing-java-game.webp");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-color: antiquewhite;">Number guessing game</h1>
+    <input type="text" placeholder="add guess" id="inputnum">
+    <input type="button" value="submit guess" onclick="random()">
+    <input type="button" value="retry" onclick="btnclickonaction()">
+    <h1 id="heading"></h1>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js/app.js"></script>
+</body>
+
+</html>
