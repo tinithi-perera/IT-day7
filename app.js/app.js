@@ -83,6 +83,10 @@
 
 // productsList.forEach(product => console.log(product));
 
-const letterList=["B","A","D","c"];
-let sortAr=letterList.toSorted();
-console.log(sortAr);
+// const letterList=["B","A","D","c"];
+// let sortAr=letterList.toSorted();
+// console.log(sortAr);
+
+const employSalary=[75000,25000,450000,55000];
+let newSalaryArray=employSalary.map(salary=>salary*2);
+console.log(newSalaryArray);
