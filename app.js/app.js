@@ -4,7 +4,7 @@ let num = Math.random() * 10 + 1;
 let randomNum = Math.floor(num);
 let chances = 3;
 console.log(randomNum);
-function random() {
+function submitbtnclickOnAction() {
 
 
     let numinput = Number(document.getElementById("inputnum").value);
@@ -13,17 +13,20 @@ function random() {
     if (numinput > randomNum) {
         heading.innerText = "too high";
     }
-    else if (numinput < randomNum) {
+     if (numinput < randomNum) {
         heading.innerText = "too low"
     }
-    else if (numinput === randomNum) {
-        heading.innerText = "congratulations, you are correct"
+     if (numinput === randomNum) {
+        heading.innerText = "congratulations, you are correct";
+        return;
+
     }
 
     chances--;
     if (chances === 0) {
         heading.innerText = `😢 Game Over! The correct number was ${randomNum}.`;
         document.getElementById("inputnum").disabled = true;
+        return;
     }
     else if (numinput > randomNum) {
         heading.innerText = `Too High! ${chances} chance(s) left.`;
