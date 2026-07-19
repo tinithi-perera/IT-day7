@@ -4,7 +4,7 @@ let num = Math.random() * 10 + 1;
 let randomNum = Math.floor(num);
 let chances = 3;
 console.log(randomNum);
-function submitbtnclickOnAction() {
+function random() {
 
 
     let numinput = Number(document.getElementById("inputnum").value);
